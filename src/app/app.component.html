@@ -1,1 +1,11 @@
-<app-header></app-header>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened="false">
+    <button mat-button>{{ btnTitle }}</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header
+      (toggle)="sidenav.toggle()"
+      (seyHello)="seyHi($event)"
+    ></app-header
+  ></mat-sidenav-content>
+</mat-sidenav-container>

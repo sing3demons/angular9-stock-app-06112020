@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core'
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  emailBadge: number = 100;
-  notiBadge: number = 10;
+  @Output('toggle') navToggle = new EventEmitter()
+  @Output() seyHello = new EventEmitter<string>()
+
+  emailBadge: number = 100
+  notiBadge: number = 10
+
   constructor() {}
+
+  onClickNavToggle(): void {
+    this.navToggle.emit()
+    this.seyHello.emit('hello')
+  }
 
   ngOnInit(): void {}
 }
