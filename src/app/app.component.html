@@ -1,9 +1,14 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" opened="false">
+  <mat-sidenav
+    #sidenav
+    [mode]="!mobileQueyMax.matches ? 'side' : 'over'"
+    [opened]="mobileQueyMax.matches ? false : true"
+  >
     <button mat-button>{{ btnTitle }}</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-header
+      [media_query]="mobileQueyMax.matches"
       (toggle)="sidenav.toggle()"
       (seyHello)="seyHi($event)"
     ></app-header
