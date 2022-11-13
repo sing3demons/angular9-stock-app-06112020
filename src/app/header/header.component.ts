@@ -8,7 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 export class HeaderComponent implements OnInit {
   @Output('toggle') navToggle = new EventEmitter()
   @Output() seyHello = new EventEmitter<string>()
-  @Input('media_query') mobileQueryMax: boolean
+
+  @Input('media_query') mediaQuery: boolean
 
   emailBadge: number = 100
   notiBadge: number = 10

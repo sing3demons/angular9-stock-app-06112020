@@ -2,7 +2,7 @@
   <button mat-button (click)="onClickNavToggle()">
     <mat-icon> menu </mat-icon>
   </button>
-  <span *ngIf="!mobileQueryMax">{{ 'MyPOS'.toUpperCase() }}</span>
+  <span *ngIf="!mediaQuery">{{ 'MyPOS'.toUpperCase() }}</span>
   <span class="flex-fill"></span>
   <div class="d-flex align-items-center">
     <button mat-button aria-label="search icon button with a heart icon">
