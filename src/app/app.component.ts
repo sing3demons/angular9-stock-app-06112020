@@ -22,7 +22,6 @@ export class AppComponent implements OnDestroy {
   }
 
   seyHi(msg: string) {
-    console.log(msg)
     this.btnTitle = msg
   }
 }
