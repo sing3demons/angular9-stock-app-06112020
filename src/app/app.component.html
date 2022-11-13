@@ -11,6 +11,10 @@
       [media_query]="mobileQueyMax.matches"
       (toggle)="sidenav.toggle()"
       (seyHello)="seyHi($event)"
-    ></app-header
-  ></mat-sidenav-content>
+    >
+    </app-header>
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
